@@ -4,7 +4,7 @@ export default function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://greim-design.myshopify.com/products.json?limit=6")
+    fetch("https://greim-design.myshopify.com/products.json?limit=50")
       .then((res) => res.json())
       .then((data) => setProducts(data.products || []));
   }, []);
