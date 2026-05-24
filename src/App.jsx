@@ -60,6 +60,7 @@ export default function App() {
             </button>
 
             <button
+              onClick={() => window.open("https://www.instagram.com/", "_blank")}
               style={{
                 background: "#1877F2",
                 color: "white",
