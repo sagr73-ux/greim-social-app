@@ -47,7 +47,7 @@ export default function App() {
 
             <button
               onClick={async () => {
-  const response = await fetch("https://graph.instagram.com/me/media", {
+  const response = await fetch("/api/post-instagram", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
