@@ -46,7 +46,22 @@ export default function App() {
             <h3>{product.title}</h3>
 
             <button
-               onClick={() => window.open("https://www.instagram.com/", "_blank")}
+              onClick={async () => {
+  const response = await fetch("https://graph.instagram.com/me/media", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      image_url: product.images?.[0]?.src,
+      caption: product.title,
+      access_token: import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN,
+    }),
+  });
+
+  const data = await response.json();
+  console.log(data);
+}}
               style={{
                 background: "#E1306C",
                 color: "white",
