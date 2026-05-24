@@ -55,8 +55,7 @@ export default function App() {
     body: JSON.stringify({
       image_url: product.images?.[0]?.src,
       caption: product.title,
-      access_token: import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN,
-    }),
+   }),
   });
 
   const data = await response.json();
