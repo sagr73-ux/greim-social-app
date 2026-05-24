@@ -46,6 +46,7 @@ export default function App() {
             <h3>{product.title}</h3>
 
             <button
+               onClick={() => window.open("https://www.instagram.com/", "_blank")}
               style={{
                 background: "#E1306C",
                 color: "white",
@@ -60,7 +61,6 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => window.open("https://www.instagram.com/", "_blank")}
               style={{
                 background: "#1877F2",
                 color: "white",
